@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-import math
-
-
 def add_0(a, b):
     return a + b
 
