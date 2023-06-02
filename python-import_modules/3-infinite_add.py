@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-
-def sum_numbers(numbers):
-    total = 0
-    for number in numbers:
-        total += number
-    return total
+import sys
 
 if __name__ == '__main__':
-    print(sum_numbers([1, 2, 3, 4, 5]))
+    args = sys.argv[1:]
+    result = 0
+    for arg in args:
+        result += int(arg)
+    print(result)
