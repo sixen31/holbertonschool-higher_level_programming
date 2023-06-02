@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-import sys
-if __name__ == '__main__':
 
-    print("This is the name of the script: ", sys.argv[0])
-    print("Number of arguments: ", len(sys.argv))
-    print("The arguments are: ", str(sys.argv))
+import sys
+
+num_args = len(sys.argv) - 1
+if num_args == 0:
+    print("0 arguments.")
+elif num_args == 1:
+    print("1 argument:")
+else:
+    print("{} arguments:".format(num_args))
+
+for i in range(1, len(sys.argv)):
+    print("{}: {}".format(i, sys.argv[i]))
