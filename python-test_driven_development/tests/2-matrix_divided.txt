@@ -1,0 +1,62 @@
+$ cat tests/2-matrix_divided.txt
+#!/usr/bin/python3
+"""
+This file contains unittests for the matrix_divided function.
+"""
+
+import doctest
+import unittest
+
+from matrix_divided import matrix_divided
+
+
+class TestMatrixDivided(unittest.TestCase):
+    """
+    Class containing unit tests for the matrix_divided function.
+    """
+
+    def test_matrix_divided(self):
+        """
+        Test that matrix_divided function returns the correct result.
+        """
+        matrix = [
+            [1, 2, 3],
+            [4, 5, 6]
+        ]
+        expected_result = [
+            [0.33, 0.67, 1.0],
+            [1.33, 1.67, 2.0]
+        ]
+        self.assertEqual(matrix_divided(matrix, 3), expected_result)
+
+    def test_matrix_divided_type_errors(self):
+        """
+        Test that matrix_divided function raises TypeError for invalid types.
+        """
+        with self.assertRaises(TypeError):
+            matrix_divided("matrix", 2)
+        with self.assertRaises(TypeError):
+            matrix_divided([[1, 2], [3, 4]], "2")
+        with self.assertRaises(TypeError):
+            matrix_divided([[1, 2], [3, 4]], [])
+        with self.assertRaises(TypeError):
+            matrix_divided([[1, 2], [3, 4]], {})
+
+    def test_matrix_divided_zero_division_error(self):
+        """
+        Test that matrix_divided function raises ZeroDivisionError for div = 0.
+        """
+        with self.assertRaises(ZeroDivisionError):
+            matrix_divided([[1, 2], [3, 4]], 0)
+
+    def test_matrix_divided_size_error(self):
+        """
+        Test that matrix_divided function raises TypeError for rows with different sizes.
+        """
+        with self.assertRaises(TypeError):
+            matrix_divided([[1, 2], [3, 4, 5]], 2)
+        with self.assertRaises(TypeError):
+            matrix_divided([[1, 2], [3], [4, 5]], 2)
+
+if __name__ == '__main__':
+    unittest.main()
