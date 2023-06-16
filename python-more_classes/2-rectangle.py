@@ -51,10 +51,3 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-
-my_rectangle = Rectangle(2, 4)
-print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.area()))
-
-print("--")
-
-print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.perimeter()))
