@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-"""This script is intended to be executed using Python 3."""
+"""MyList Class that inherits from List
+"""
 
 
 class MyList(list):
-    """"A class that inherits from list."""
+    """summary
+
+    Args:
+        list (type): description
+    """
     def print_sorted(self):
         print(sorted(self))
