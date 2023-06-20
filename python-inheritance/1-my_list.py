@@ -4,10 +4,10 @@
 
 
 class MyList(list):
-    """summary
+    """_summary_
 
     Args:
-        list (type): description
+        list (_type_): _description_
     """
     def print_sorted(self):
         print(sorted(self))
