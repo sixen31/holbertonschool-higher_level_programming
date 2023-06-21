@@ -3,17 +3,16 @@
 """
 
 
+import json
 
-def append_write(filename="", text=""):
+def to_json_string(my_obj):
     """
-    Append a string to the end of a text file (UTF8) and return the number 
+    Return the JSON representation of an object (string).
 
     Args:
-        filename (str): The name of the file to append (default: empty string).
-        text (str): The string to append to the file.
+        my_obj (object): The object to convert to JSON.
 
     Returns:
-        int: The number of characters added to the file.
+        str: The JSON representation of the object.
     """
-    with open(filename, mode='a', encoding='utf-8') as file:
-        return file.write(text)
+    return json.dumps(my_obj)
