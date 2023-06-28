@@ -78,3 +78,18 @@ class Square(Rectangle):
         """Return the dictionary representation of the Square."""
         attributes = ["id", "size", "x", "y"]
         return {attr: getattr(self, attr) for attr in attributes}
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return the JSON string representation of list_dictionaries.
+
+        Args:
+            list_dictionaries (list): List of dictionaries.
+
+        Returns:
+            str: JSON string representation of list_dictionaries.
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
