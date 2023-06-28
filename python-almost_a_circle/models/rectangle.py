@@ -147,15 +147,13 @@ class Rectangle(Base):
         for _ in range(self.height):
             print("#" * self.width)
 
-    def __str__(self):
-        """Returns a string representation of the Rectangle instance."""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-
-        def display(self):
-        """Prints the Rectangle instance with the character '#',
-        taking into account the x and y coordinates."""
-        for _ in range(self.y):
-            print()
+    def display(self):
+        """Affiche le rectangle en utilisant le caractère '#' en tenant compte de x et y."""
+        rectangle = self.y * "\n"
         for _ in range(self.height):
-            print(" " * self.x + "#" * self.width)
+            rectangle += (" " * self.x) + ("#" * self.width) + "\n"
+        print(rectangle, end='')
 
+    def __str__(self):
+        """Retourne une représentation sous forme de chaîne de caractères de l'instance Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
