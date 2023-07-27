@@ -1,9 +1,9 @@
--- Utiliser la base de données hbtn_0d_tvshows
-USE hbtn_0d_tvshows;
-
--- Sélectionner les émissions sans genre en utilisant une jointure LEFT JOIN entre tv_shows et tv_show_genres et un WHERE clause
-SELECT tv_shows.title, tv_show_genres.genre_id
+-- List all shows contained in 'hbtn_0d_tvshows' without a genre linked
+-- Each record should display tv_shows.title, tv_show_genres.genre_id
+-- Results must be sorted ascending order by tv_shows.title and tv_show_genres.genre_id
+-- You can use only one SELECT statement
+SELECT tv_shows.title, tv_show_genres.genre_id -- Query to join cities and states
 FROM tv_shows
-LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.tv_show_id
-WHERE tv_show_genres.genre_id IS NULL
+LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+WHERE tv_show_genres.show_id IS NULL
 ORDER BY tv_shows.title, tv_show_genres.genre_id;
