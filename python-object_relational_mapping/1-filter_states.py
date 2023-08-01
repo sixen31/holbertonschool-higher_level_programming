@@ -1,33 +1,31 @@
 #!/usr/bin/python3
-# List all states with a name starting with uppercase N
-# Username, password, and database names are given as user args
-
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    user_db = sys.argv[1]
-    passwd_db = sys.argv[2]
-    name_db = sys.argv[3]
+    if len(sys.argv) != 4:
+        print("Utilisation : {} <nom_utilisateur> <mot_de_passe> <nom_base_de_donnees>".format(sys.argv[0]))
+        sys.exit(1)
 
-    db = MySQLdb.connect(
-            host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306
-            )
+    nom_utilisateur = sys.argv[1]
+    mot_de_passe = sys.argv[2]
+    nom_base_de_donnees = sys.argv[3]
 
-    cursor = db.cursor()
+    try:
+        # Connectez-vous à la base de données MySQL
+        db = MySQLdb.connect(host="localhost", port=3306, user=nom_utilisateur, passwd=mot_de_passe, db=nom_base_de_donnees)
 
-    cursor.execute(
-            """
-        SELECT * FROM states
-        WHERE BINARY name
-        LIKE 'N%'
-        ORDER BY states.id ASC
-        """
-        )
+        curseur = db.cursor()
 
-    results = cursor.fetchall()
+        curseur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
-    for element in results:
-        print(element)
+        resultats = curseur.fetchall()
+        for ligne in resultats:
+            print(ligne)
 
-    db.close()
+        curseur.close()
+        db.close()
+
+    except MySQLdb.Error as e:
+        print("Erreur lors de la connexion à la base de données MySQL : {}".format(e))
+        sys.exit(1)
