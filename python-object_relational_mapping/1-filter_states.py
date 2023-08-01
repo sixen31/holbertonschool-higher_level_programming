@@ -2,7 +2,6 @@
 # List all states with a name starting with uppercase N
 # Username, password, and database names are given as user args
 
-
 import MySQLdb
 import sys
 
