@@ -1,4 +1,4 @@
-#!/usr/bin/pythoin3
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for i, col in enumerate(row):
@@ -6,4 +6,4 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(col), end=" ")
             else:
                 print("{:d}".format(col), end="")
-        print()
+        print("$")
