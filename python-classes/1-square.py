@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Class definition"""
+"""Définition de la classe"""
+
 
 class Square:
-    """This class defines a square."""
+    """Cette classe définit un carré."""
 
-def __init__(self, size):
-    self.__size = size
+    def __init__(self, size):
+        self.__size = size
