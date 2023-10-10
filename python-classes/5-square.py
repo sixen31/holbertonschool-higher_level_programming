@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' '''
+'''executable'''
 
 
 class Square:
