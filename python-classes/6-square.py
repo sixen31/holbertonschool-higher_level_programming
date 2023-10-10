@@ -37,9 +37,9 @@ class Square:
             ValueError: Si value est inférieur à 0.
         """
         if not isinstance(value, int):
-            raise TypeError("size doit être un entier")
+            raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError("size doit être >= 0")
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     @property
