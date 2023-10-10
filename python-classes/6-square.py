@@ -10,11 +10,12 @@ class Square:
 
         Args:
             size (int): La taille du carré. Valeur par défaut est 0.
-            position (tuple): La position du carré. Valeur par défaut est (0, 0).
+            tuple: La position du carré. Valeur par défaut est (0, 0)
 
         Raises:
-            TypeError: Si size n'est pas un entier ou si position n'est pas un tuple de deux entiers positifs.
-            ValueError: Si size est inférieur à 0 ou si l'un des éléments de position est inférieur à 0.
+            TypeError: Si size est pas un entier ou si position est pas tuple
+            ValueError: Si size est inférieur à 0 ou si l'un des éléments
+            de position est inférieur à 0.
         """
         self.size = size
         self.position = position
@@ -60,7 +61,7 @@ class Square:
         if not isinstance(value, tuple) or len(value) != 2 or \
                 not all(isinstance(i, int) for i in value) or \
                 not all(i >= 0 for i in value):
-            raise TypeError("position doit être un tuple de deux entiers positifs")
+            raise TypeError("position must be a tuple of two positive integer")
         self.__position = value
 
     def area(self):
