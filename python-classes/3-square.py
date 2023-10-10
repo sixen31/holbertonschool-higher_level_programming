@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+'''definie classe'''
+
+
 class Square:
     """Cette classe définit un carré."""
 
