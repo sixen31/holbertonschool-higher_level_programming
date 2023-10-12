@@ -1,9 +1,15 @@
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrixC = [[1, 2, 3], [3, 4, 5], [5, 6, 7]]
+>>> print(matrix_divided(matrixC, 1))
+[[1.0, 2.0, 3.0], [3.0, 4.0, 5.0], [5.0, 6.0, 7.0]]
 
->>> matrixA = [[1, 2, 3], [3, 4, 5], [5, 6, 7]]
->>> matrixB = [[1, 2, 3], [4, 5, 6]]
+>>> matrixD = [[10, 20, 30], [40, 50, 60]]
+>>> print(matrix_divided(matrixD, 2.5))
+[[4.0, 8.0, 12.0], [16.0, 20.0, 24.0]]
 
->>> print(matrix_divided(matrixA, 4))
-[[0.25, 0.5, 0.75], [0.75, 1.0, 1.25], [1.25, 1.5, 1.75]]
->>> print(matrix_divided(matrixB, 3))
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrixE = []
+>>> print(matrix_divided(matrixE, 5))
+[]
+
+>>> matrixF = [[1.5, 2.5], [3.5, 4.5]]
+>>> print(matrix_divided(matrixF, 0.5))
+[[3.0, 5.0], [7.0, 9.0]]
