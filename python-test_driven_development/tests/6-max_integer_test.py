@@ -31,7 +31,3 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(False), False)
         self.assertEqual(max_integer([False, True, 3]), 3)
         self.assertEqual(max_integer("higher ASCII value is : v"), "v")
-
-
-if __name__ == '__main__':
-    unittest.main()
