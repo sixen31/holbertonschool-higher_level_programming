@@ -1,0 +1,39 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.$
+$
+Quonam modo?$
+$
+
+>>> text_indentation("Hello: How are you? I'm fine. Thank you.")
+Hello:$
+$
+How are you?$
+$
+I'm fine.$
+$
+Thank you.$
+
+>>> try:
+...     text_indentation(123)
+... except Exception as e:
+...     print(e)
+text must be a string
+
+Ces fichiers devraient être placés dans le même répertoire que les fichiers de test et de code, et vous pouvez exécuter les tests avec la commande python3 -m doctest -v 5-text_indentation.txt.
+User
+2 / 2
+dan sle code que tu ma fourni commente moi cette ligne avec """ en une seul eligne 
+def text_indentation(text):
+ChatGPT
+
+Bien sûr, voici un commentaire pour la ligne def text_indentation(text): en une seule ligne avec """ """ :
+
+python
+
+def text_indentation(text):
+    """Prints a text with 2 new lines after each of these characters: ., ? and :"""
+
+Ce commentaire résume de manière concise l'objectif de la fonction text_indentation.
+
