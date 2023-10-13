@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""define class"""
+""" Rectangle Module"""
+
 
 class Rectangle:
     """ Rectangle class! For rectangles ONLY. """
