@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+"""define class"""
 
 
 def matrix_divided(matrix, div):
+        """Divides all elements in a matrix by a given divisor.
+
+    Args:
+        matrix (list of lists): The matrix to be divided.
+        div (int or float): The divisor to divide each element in the matrix by.
+
+    Returns:
+        list of lists: A new matrix with each element divided by the divisor.
+    """
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
