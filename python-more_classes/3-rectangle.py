@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """ Rectangle defines as rectangle by: (based on 2-rectangle.py) """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
