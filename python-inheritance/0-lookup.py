@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """define functon"""
     return dir(list)
