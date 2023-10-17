@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """define functon"""
-    return dir(list)
+    return dir(obj)
