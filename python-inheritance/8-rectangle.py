@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""define python"""
-Rectangle = __import__('8-rectangle').Rectangle
+"""A module with a class BaseGeometry"""
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
-class Basegeometry:
-    """Define class"""
+class Rectangle(BaseGeometry):
+    """Rectangle class that inherits from BaseGeometry"""
 
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def area(self):
-        """Calculate the area"""
-        return self.width * self.height
+        self.integer_validator("width", width)
+        self.__width = width
+        self.integer_validator("height", height)
+        self.__height = height
