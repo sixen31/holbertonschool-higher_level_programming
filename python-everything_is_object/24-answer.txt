@@ -1,1 +1,1 @@
-Program did not output anything!
+True
