@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+"""define python"""
+
 import json
+
 
 def from_json_string(my_str):
     """
