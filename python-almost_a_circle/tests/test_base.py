@@ -21,5 +21,20 @@ class TestBase(unittest.TestCase):
         b5 = Base()
         self.assertEqual(b5.id, 4)
 
+    def test_base_id_increment(self):
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
+
+    def test_base_id_custom(self):
+        b3 = Base(100)
+        self.assertEqual(b3.id, 100)
+
+    def test_get_nb_objects(self):
+        self.assertEqual(Base.get_nb_objects(), 3)
+
+
 if __name__ == '__main__':
     unittest.main()
