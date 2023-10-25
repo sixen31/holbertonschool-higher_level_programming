@@ -28,10 +28,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def area(self):
-        """Compute and return the area of the rectangle."""
-        return self.width * self.height
-
     @property
     def width(self):
         """Get the width of the rectangle.
@@ -137,15 +133,8 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Public method that returns the area value
-        of the Rectangle instance
-        """
-        return self.width * self.heigh
-
-    def display(self):
-        """Prints the Rectangle instance with the character '#'"""
-        for _ in range(self.height):
-            print("#" * self.width)
+        """Compute and return the area of the rectangle."""
+        return self.width * self.height
 
     def display(self):
         """Affiche le rectangle en utilisant le caractère '#' en tenant compte de x et y."""
@@ -200,3 +189,14 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Return a dictionary representation of the Rectangle."""
+        rect_dict = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+        return rect_dict                  self.y = value
